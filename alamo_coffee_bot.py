@@ -64,7 +64,7 @@ def order_latte():
         if switch.get(user_response, "Invalid size") != "Invalid size":
             break
         else:
-            print("Please select a drink type by inputting 'a', 'b' or 'c'.")
+            print("Please select a milk type by inputting 'a', 'b' or 'c'.")
     return switch.get(user_response, "Invalid size")
 
 
