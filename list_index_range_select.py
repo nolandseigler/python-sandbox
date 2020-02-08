@@ -6,3 +6,6 @@ middle_index = len(suitcase) / 2
 
 # select middle two
 middle = suitcase[int(middle_index - .5):int(1 + middle_index + .5)]
+
+start = suitcase[:3]
+end = suitcase[-2:]
