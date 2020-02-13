@@ -27,3 +27,8 @@ for num in num_exercises:
     total_exercises += num_exercises.get(num)
 
 print(total_exercises)
+
+pct_women_in_occupation = {"CEO": 28, "Engineering Manager": 9, "Pharmacist": 58, "Physician": 40, "Lawyer": 37, "Aerospace Engineer": 9}
+
+for occupation, qty in pct_women_in_occupation.items():
+    print("Women make up " + str(qty) + " percent of " + occupation + "s.")
