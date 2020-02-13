@@ -20,3 +20,10 @@ lessons = list(num_exercises)
 
 print(users)
 print(lessons)
+
+num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
+total_exercises = 0
+for num in num_exercises:
+    total_exercises += num_exercises.get(num)
+
+print(total_exercises)
