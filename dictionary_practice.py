@@ -11,3 +11,12 @@ health_points += available_items.pop("power stew", 0)
 health_points += available_items.pop("mystic bread", 0)
 print(available_items)
 print(health_points)
+
+user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
+num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
+
+users = user_ids.keys()
+lessons = list(num_exercises)
+
+print(users)
+print(lessons)
