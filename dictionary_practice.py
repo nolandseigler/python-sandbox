@@ -10,6 +10,23 @@ def word_length_dictionary(words):
 # should print {"apple":5, "dog": 3, "cat":3}
 # print(word_length_dictionary(["a", ""]))
 # should print {"a": 1, "": 0}
+
+# Write your unique_values function here:
+def unique_values(my_dictionary):
+    unique = []
+    unique_qty = 0
+    for value in my_dictionary.values():
+        if not value in unique:
+            unique.append(value)
+            unique_qty += 1
+    return unique_qty
+
+
+# Uncomment these function calls to test your  function:
+# print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# should print 2
+# print(unique_values({0:3, 1:3, 4:3, 5:3}))
+# should print 1
 user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931,
             "keysmithKeith": 129384}
 tc_id = user_ids.get("teraCoder", 100000)
