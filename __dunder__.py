@@ -18,3 +18,19 @@ salt = Molecule([sodium, chlorine])
 salt2 = sodium + chlorine
 print(salt)
 print(salt2)
+
+
+class LawFirm:
+    def __init__(self, practice, lawyers):
+        self.practice = practice
+        self.lawyers = lawyers
+
+    def __len__(self):
+        return len(self.lawyers)
+
+    def __contains__(self, lawyer):
+        if lawyer in self.lawyers:
+            return True
+
+
+d_and_p = LawFirm("Injury", ["Donelli", "Paderewski"])
