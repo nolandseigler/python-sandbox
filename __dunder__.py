@@ -34,3 +34,10 @@ class LawFirm:
 
 
 d_and_p = LawFirm("Injury", ["Donelli", "Paderewski"])
+
+
+class SortedList(list):
+    def append(self, value):
+        # call append from superclass(list) which is the built in python class list
+        super().append(value)
+        self.sort()
