@@ -46,7 +46,7 @@ class Franchise:
         return "Store at " + self.address
 
     def available_menus(self, time):
-        return [menu for menu in self.menus if time >= menu.start_time and time <= menu.end_time]
+        return [menu for menu in self.menus if menu.start_time <= time <= menu.end_time]
 
 
 flagship_store = Franchise("1232 West End Road", menusList)
