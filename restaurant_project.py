@@ -6,8 +6,7 @@ class Menu:
         self.end_time = end_time
 
     def __repr__(self):
-        return self.name.capitalize() + "Menu available from " + str(self.start_time) + " to " + str(
-            self.end_time) + "."
+        return self.name.capitalize() + " Menu available from " + str(self.start_time) + " to " + str(self.end_time)
 
     def calculate_bill(self, purchased_items):
         price = 0
@@ -54,3 +53,19 @@ flagship_store = Franchise("1232 West End Road", menusList)
 new_installment = Franchise("12 East Mulberry Street", menusList)
 
 print(flagship_store.available_menus(1200))
+print(flagship_store.available_menus(1700))
+
+
+class Business:
+    def __init__(self, name, franchises):
+        self.name = name
+        self.franchises = franchises
+
+
+arepas_menu = Menu("Take a' Arepa",
+                   {'arepa pabellon': 7.00, 'pernil arepa': 8.50, 'guayanes arepa': 8.00, 'jamon arepa': 7.50, }, 1000,
+                   2000)
+
+arepas_place = Franchise("189 Fitzgerald Avenue", arepas_menu)
+
+take_a_arepa = Business("Take a' Arepa", arepas_place)
