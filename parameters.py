@@ -1,9 +1,21 @@
 # some of this is example code i did but it will not execute just. I am using this for examples
 
 import os
-
-# POSITIONAL ARGUMENTS!!!!
 from os.path import join
+# KEYWWORD ARGUMENT UNPACKING. **YIELDS A DICT OF ARGS
+print("My name is {name} and I'm feeling {feeling}.".format(name="Bob Saget", feeling="hungry"))
+
+from products import create_product
+
+
+def create_products(**products_dict):
+    for name, price in products_dict.items():
+        create_product(name, price)
+
+
+create_products(baseball=3, shirt=14, guitar=70)
+# POSITIONAL ARGUMENTS!!!! **YIELDS A TUPLE OF ARGS
+
 
 path_segment_1 = "/Home/User"
 path_segment_2 = "Codecademy/videos"
