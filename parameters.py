@@ -14,7 +14,7 @@ def create_products(**products_dict):
 
 
 create_products(baseball=3, shirt=14, guitar=70)
-# POSITIONAL ARGUMENTS!!!! **YIELDS A TUPLE OF ARGS
+# ARBITRARY POSITIONAL ARGUMENTS!!!! **YIELDS A TUPLE OF ARGS
 
 
 path_segment_1 = "/Home/User"
