@@ -27,7 +27,6 @@ vp_chunk_grammar = "VP: {<DT>?<JJ>+<NN><VB.*><RB.?>?}"
 np_chunk_parser = RegexpParser(np_chunk_grammar)
 vp_chunk_parser = RegexpParser(vp_chunk_grammar)
 
-
 # chunk parse phrases to lists
 np_chunked_text = [np_chunk_parser.parse(pos_sentence) for pos_sentence in pos_tagged_text]
 vp_chunked_text = [vp_chunk_parser.parse(pos_sentence) for pos_sentence in pos_tagged_text]
@@ -37,12 +36,12 @@ vp_chunked_text = [vp_chunk_parser.parse(pos_sentence) for pos_sentence in pos_t
 # print(vp_chunked_text[100])
 
 
-
 # print most common np and vp chunks
 most_common_np_chunks = np_chunk_counter(np_chunked_text)
+print("30 MOST COMMON NOUN PHRASES")
 print(most_common_np_chunks)
+print("\n")
 most_common_vp_chunks = vp_chunk_counter(vp_chunked_text)
+print("30 MOST COMMON VERB PHRASES")
 print(most_common_vp_chunks)
-
-
-
+print("\n")
