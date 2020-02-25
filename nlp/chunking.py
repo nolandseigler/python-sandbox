@@ -54,4 +54,27 @@ most_common_vp_chunks = vp_chunk_counter(vp_chunked_oz)
 
 print(most_common_vp_chunks)
 
+#CHUNK FILTERING
+
+# define chunk grammar to chunk an entire sentence together
+grammar = "Chunk: {<.*>+}"
+chunk_grammar = """NP: {<.*>+}
+}<VB.?|IN>+{"""
+# create RegexpParser object
+parser = RegexpParser(grammar)
+chunk_parser = RegexpParser(chunk_grammar)
+
+# chunk the pos-tagged sentence at index 230 in pos_tagged_oz
+chunked_dancers = parser.parse(pos_tagged_oz[230])
+print(chunked_dancers)
+
+
+# chunk and filter the pos-tagged sentence at index 230 in pos_tagged_oz here
+filtered_dancers = chunk_parser.parse(pos_tagged_oz[230])
+print(filtered_dancers)
+
+
+# pretty_print the chunked and filtered sentence here
+Tree.fromstring(str(filtered_dancers)).pretty_print()
+
 
