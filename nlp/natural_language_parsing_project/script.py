@@ -3,8 +3,8 @@ from tokenize_words import word_sentence_tokenize
 from chunk_counters import np_chunk_counter, vp_chunk_counter
 
 # import text of choice here
-text = open("the_iliad.txt",encoding='utf-8').read().lower()
-
+# text = open("the_iliad.txt",encoding='utf-8').read().lower()
+text = open("/Users/nolandseigler/Desktop/data_for_nlp/king_james_bible.txt", encoding='utf-8').read().lower()
 # tokenize sentences then tokenize words from sentences
 word_tokenized_text = word_sentence_tokenize(text)
 
